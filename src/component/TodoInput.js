@@ -24,16 +24,18 @@ export default class TodoInput extends Component {
                     </div>
 
                     <div className="row mt-2">
-                        <div className="col-md-6">
+                        <div className="col-md-8">
                             <button 
+                                style={{width : '100%'}}
                                 type="submit"
                                 className={"btn btn-block mt-3 btn-info"}
                                 >
-                                Search todo list
+                                Search
                             </button>
                         </div>
-                        <div className="col-md-6">
+                        <div className="col-md-4">
                             <button 
+                                style={{width : '100%'}}
                                 type="submit"
                                 className={`btn btn-block mt-3 ${editItem ? 'btn-success' : 'btn-info'}`}
                                 >

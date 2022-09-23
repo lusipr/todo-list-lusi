@@ -20,8 +20,8 @@ export default class TodoList extends Component {
                 </h3>
 
                 <div className="row text-center d-flex justify-content-center">
-                    <div className="col-md-4">
-                        <button 
+                    <div className="col-lg-4">
+                        <button style={{width : '100%'}}
                             type="button"
                             className="btn btn-info btn-block mt-1"
                             onClick={() => updateTodosToShow("all")}
@@ -29,8 +29,8 @@ export default class TodoList extends Component {
                             All
                         </button>
                     </div>
-                    <div className="col-md-4">
-                        <button 
+                    <div className="col-lg-4">
+                        <button style={{width : '100%'}}
                             type="button"
                             className="btn btn-info btn-block mt-1"
                             onClick={() => updateTodosToShow("done")}
@@ -38,8 +38,8 @@ export default class TodoList extends Component {
                             Done
                         </button>
                     </div>
-                    <div className="col-md-4">
-                        <button 
+                    <div className="col-lg-4">
+                        <button style={{width : '100%'}}
                             type="button"
                             className="btn btn-info btn-block mt-1"
                             onClick={() => updateTodosToShow("todo")}
@@ -68,9 +68,10 @@ export default class TodoList extends Component {
                             })
                         }
 
-                        <div className="text-center d-flex justify-content-center gap-3">
-                            <div className>
+                        <div className="row mt-5 text-center d-flex justify-content-center">
+                            <div className="col-md-6">
                                 <button 
+                                    style={{width : '100%'}}
                                     type="button"
                                     className="btn btn-danger "
                                     onClick={handleDeleteDoneTasks}
@@ -78,8 +79,9 @@ export default class TodoList extends Component {
                                     Delete done tasks
                                 </button>
                             </div>
-                            <div className>
+                            <div className="col-md-6">
                                 <button 
+                                    style={{width : '100%'}}
                                     type="button"
                                     className="btn btn-danger "
                                     onClick={clearList}

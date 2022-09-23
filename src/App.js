@@ -58,9 +58,9 @@ class App extends Component {
 		}
 	}
 
-	updateTodosToShow = string => {
+	updateTodosToShow = number => {
 		this.setState({
-			itemsToShow: string
+			itemsToShow: number
 		});
 	};
 
