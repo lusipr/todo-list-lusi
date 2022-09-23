@@ -3,6 +3,7 @@ import TodoInput from './component/TodoInput';
 import TodoList from './component/TodoList';
 import "bootstrap/dist/css/bootstrap.min.css";
 import uuid from 'react-uuid';
+// import data from './data.json';
 
 class App extends Component {
 	constructor(props) {
@@ -13,18 +14,32 @@ class App extends Component {
 			id: uuid(),
 			item: '',
 			editItem: false,
-		}
+			completed: false
+		};
 	}
+	componentDidMount(){
+		fetch('http://localhost:3000/data')
+		  .then(data => data.json())
+		  .then(json => {
+			  this.setState({
+				items: json,
+				itemsToShow: "all",
+				id: uuid(),
+				item: '',
+				editItem: false,
+				completed: false
+			  })
+		  });
+	  }
 
 	handleChange = event => {
 		this.setState({
 			item: event.target.value
 		})
 	}
-
+	
 	handleSubmit = event => {
-		event.preventDefault()
-		
+		event.preventDefault()	
 		const newItem = {
 			id: this.state.id,
 			title: this.state.item,
@@ -96,7 +111,8 @@ class App extends Component {
 	}
 
 	render() {
-		let items = []
+		let { items } = this.state;
+		// console.log({items})
 
 		if (this.state.itemsToShow === "all") {
 			items = this.state.items;
@@ -110,7 +126,7 @@ class App extends Component {
 			<div className="container">
 				<div className="row">
 					<div className="col-10 col-md-8 mx-auto mt-4">
-						<h3 className="text-capitalize text-center">TodoInput</h3>
+						<h3 className="text-capitalize text-center">TodoSearch</h3>
 						<TodoInput
 							item={this.state.item}
 							handleChange={this.handleChange}

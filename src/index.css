@@ -15,4 +15,5 @@ code {
 .completed-task {
   text-decoration: line-through;
   color: #db3545;
+  
 }

@@ -19,7 +19,7 @@ export default class TodoList extends Component {
                     TodoList
                 </h3>
 
-                <div className="row">
+                <div className="row text-center d-flex justify-content-center">
                     <div className="col-md-4">
                         <button 
                             type="button"
@@ -68,20 +68,20 @@ export default class TodoList extends Component {
                             })
                         }
 
-                        <div className="row mt-4">
-                            <div className="col-md-6">
+                        <div className="text-center d-flex justify-content-center gap-3">
+                            <div className>
                                 <button 
                                     type="button"
-                                    className="btn btn-danger btn-block mt-1"
+                                    className="btn btn-danger "
                                     onClick={handleDeleteDoneTasks}
                                 >
                                     Delete done tasks
                                 </button>
                             </div>
-                            <div className="col-md-6">
+                            <div className>
                                 <button 
                                     type="button"
-                                    className="btn btn-danger btn-block mt-1"
+                                    className="btn btn-danger "
                                     onClick={clearList}
                                 >
                                     Delete all tasks

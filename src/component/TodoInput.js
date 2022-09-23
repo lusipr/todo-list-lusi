@@ -27,7 +27,7 @@ export default class TodoInput extends Component {
                         <div className="col-md-6">
                             <button 
                                 type="submit"
-                                className={`btn btn-block mt-3 ${editItem ? 'btn-success' : 'btn-info'}`}
+                                className={"btn btn-block mt-3 btn-info"}
                                 >
                                 Search todo list
                             </button>
