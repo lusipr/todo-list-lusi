@@ -112,7 +112,7 @@ class App extends Component {
 
 	render() {
 		let { items } = this.state;
-		// console.log({items})
+		console.log({items})
 
 		if (this.state.itemsToShow === "all") {
 			items = this.state.items;
